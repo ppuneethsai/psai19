@@ -13,7 +13,7 @@
     <script>
         // Check if the user is logged in before accessing the page
         window.onload = function() {
-            const loggedIn = localStorage.getItem('loggedIn');
+            const loggedIn = sessionStorage.getItem('loggedIn');
             if (!loggedIn) {
                 alert('You must log in first.');
                 window.location.href = 'login.html'; // Redirect to login page if not logged in
@@ -22,7 +22,7 @@
 
         // Handle logout
         function handleLogout() {
-            localStorage.removeItem('loggedIn'); // Remove local storage data on logout
+            sessionStorage.removeItem('loggedIn'); // Remove session data on logout
             window.location.href = 'index.html';   // Redirect to login page
         }
     </script>
